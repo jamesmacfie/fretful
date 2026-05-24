@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Upload } from "lucide-react";
+import { Download, RotateCcw, Upload } from "lucide-react";
 import * as React from "react";
 
 import { Button } from "#/components/ui/button";
@@ -24,12 +24,15 @@ function Settings() {
 		updateSettings,
 		exportProgress,
 		importProgress,
+		resetProgress,
 		persistenceAvailable,
 	} = useTrainer();
 	const settings = progress.settings;
 	const [exportText, setExportText] = React.useState("");
 	const [importText, setImportText] = React.useState("");
 	const [importMessage, setImportMessage] = React.useState("");
+	const [resetArmed, setResetArmed] = React.useState(false);
+	const [resetMessage, setResetMessage] = React.useState("");
 
 	const updateExport = () => {
 		setExportText(exportProgress());
@@ -38,6 +41,24 @@ function Settings() {
 	const importFromText = () => {
 		const result = importProgress(importText);
 		setImportMessage(result.message);
+	};
+
+	const requestReset = () => {
+		setResetArmed(true);
+		setResetMessage("");
+	};
+
+	const confirmReset = () => {
+		resetProgress();
+		setExportText("");
+		setResetArmed(false);
+		setResetMessage(
+			"Learning progress reset. Display and sound settings were kept.",
+		);
+	};
+
+	const cancelReset = () => {
+		setResetArmed(false);
 	};
 
 	return (
@@ -155,6 +176,59 @@ function Settings() {
 						/>
 					</div>
 				</SettingGroup>
+			</section>
+
+			<section className="section-band">
+				<div className="section-heading">
+					<div>
+						<p className="app-kicker">Progress</p>
+						<h2>Reset learning progress</h2>
+					</div>
+				</div>
+				<div className="reset-panel">
+					<div className="reset-panel__copy">
+						<p>
+							Clear completed checkpoints, unlocked modules, sessions, weak-spot
+							stats, and the review queue. Display and sound settings stay as
+							they are.
+						</p>
+						<ul className="inline-list" aria-label="Current progress">
+							<li>{progress.stats.sessionsCompleted} sessions</li>
+							<li>
+								{progress.course.completedCheckpointIds.length} checkpoints
+							</li>
+							<li>{progress.stats.reviewQueue.length} review items</li>
+						</ul>
+					</div>
+					<div className="reset-actions">
+						{resetArmed ? (
+							<>
+								<Button
+									type="button"
+									variant="destructive"
+									onClick={confirmReset}
+								>
+									<RotateCcw />
+									Confirm reset
+								</Button>
+								<Button type="button" variant="outline" onClick={cancelReset}>
+									Cancel
+								</Button>
+							</>
+						) : (
+							<Button type="button" variant="outline" onClick={requestReset}>
+								<RotateCcw />
+								Reset Progress
+							</Button>
+						)}
+					</div>
+				</div>
+				{resetArmed ? (
+					<p className="reset-warning">
+						This cannot be undone unless you export a backup first.
+					</p>
+				) : null}
+				{resetMessage ? <p className="import-message">{resetMessage}</p> : null}
 			</section>
 
 			<section className="section-band">

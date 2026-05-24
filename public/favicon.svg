@@ -9,5 +9,4 @@
 	<path d="M318 116c62 14 105 43 132 87" fill="none" stroke="#ffe1a3" stroke-width="32" stroke-linecap="round" />
 	<ellipse cx="235" cy="358" rx="86" ry="58" transform="rotate(-18 235 358)" fill="#f4b64a" />
 	<ellipse cx="235" cy="358" rx="44" ry="26" transform="rotate(-18 235 358)" fill="#17151f" opacity="0.5" />
-	<path d="M110 356c43 55 113 85 200 72" fill="none" stroke="#ff7b4a" stroke-width="20" stroke-linecap="round" />
 </svg>

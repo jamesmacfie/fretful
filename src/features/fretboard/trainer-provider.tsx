@@ -13,6 +13,7 @@ import {
 	defaultProgressState,
 	parseProgressJson,
 	readStoredProgress,
+	resetLearningProgress,
 	serializeProgress,
 	writeStoredProgress,
 } from "./storage";
@@ -195,8 +196,8 @@ export function TrainerProvider({ children }: { children: React.ReactNode }) {
 	}, []);
 
 	const resetProgress = React.useCallback(() => {
-		setProgress(defaultProgressState);
-		setLiveMessage("Progress reset.");
+		setProgress((current) => resetLearningProgress(current));
+		setLiveMessage("Learning progress reset.");
 	}, []);
 
 	const currentModule = getModule(progress.course.currentModuleId);

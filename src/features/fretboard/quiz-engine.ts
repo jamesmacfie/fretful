@@ -30,6 +30,8 @@ interface PromptOptions {
 	now?: number;
 }
 
+const FIND_NOTE_ALL_PROMPT_RATE = 0.5;
+
 function randomItem<T>(items: T[], random: () => number) {
 	if (items.length === 0) {
 		throw new Error("Cannot choose from an empty list");
@@ -132,6 +134,24 @@ export function normalizeModeForModule(module: CourseModule, mode?: QuizMode) {
 	return module.defaultMode;
 }
 
+function choosePromptMode(
+	module: CourseModule,
+	mode: QuizMode,
+	random: () => number,
+) {
+	const normalizedMode = normalizeModeForModule(module, mode);
+
+	if (
+		normalizedMode === "find-note" &&
+		isModeAvailable(module, "find-all") &&
+		random() < FIND_NOTE_ALL_PROMPT_RATE
+	) {
+		return "find-all";
+	}
+
+	return normalizedMode;
+}
+
 export function createPracticePrompt({
 	module,
 	mode,
@@ -157,7 +177,7 @@ export function createPracticePrompt({
 			? mixedSource
 			: "current";
 	const promptModule = source === "stretch" && nextModule ? nextModule : module;
-	const promptMode = normalizeModeForModule(promptModule, mode);
+	const promptMode = choosePromptMode(promptModule, mode, random);
 	const activeCells = getActiveCells(promptModule.zone);
 	const reviewItem =
 		source === "review" ? getDueReviewItems(progress)[0] : undefined;

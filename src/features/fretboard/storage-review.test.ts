@@ -12,6 +12,7 @@ import {
 import {
 	defaultProgressState,
 	parseProgressJson,
+	resetLearningProgress,
 	serializeProgress,
 } from "./storage";
 import type { AnswerResult, ProgressState } from "./types";
@@ -58,6 +59,45 @@ describe("storage and review", () => {
 		if (parsed.ok) {
 			expect(parsed.value.settings.autoAdvanceOnCorrect).toBe(true);
 		}
+	});
+
+	it("resets learning progress without replacing settings", () => {
+		const progress = structuredClone(defaultProgressState);
+		progress.settings.handedness = "left";
+		progress.settings.highContrast = true;
+		progress.course.unlockedModuleIds = [
+			COURSE_MODULES[0].id,
+			COURSE_MODULES[1].id,
+		];
+		progress.course.completedCheckpointIds = [COURSE_MODULES[0].id];
+		progress.course.currentModuleId = COURSE_MODULES[1].id;
+		progress.stats.sessionsCompleted = 3;
+		progress.stats.avgResponseMs = 875;
+		progress.stats.noteStats["pc:4"] = {
+			attempts: 5,
+			correct: 4,
+			totalResponseMs: 4_375,
+			lastResponseMs: 800,
+			streak: 2,
+			lapses: 1,
+			lastSeenAt: 1_700_000_000_000,
+			dueAt: 1_700_086_400_000,
+		};
+		progress.stats.reviewQueue = [
+			{
+				kind: "note",
+				key: "pc:4",
+				dueAt: 1_700_086_400_000,
+				priority: 5,
+			},
+		];
+
+		const reset = resetLearningProgress(progress);
+
+		expect(reset.settings.handedness).toBe("left");
+		expect(reset.settings.highContrast).toBe(true);
+		expect(reset.course).toEqual(defaultProgressState.course);
+		expect(reset.stats).toEqual(defaultProgressState.stats);
 	});
 
 	it("repairs beginner unlocks from saved stats without using speed as a gate", () => {

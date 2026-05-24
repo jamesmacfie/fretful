@@ -49,6 +49,15 @@ export const defaultProgressState: ProgressState = {
 	stats: defaultStats,
 };
 
+export function resetLearningProgress(progress: ProgressState): ProgressState {
+	return {
+		version: 1,
+		settings: { ...defaultSettings, ...progress.settings },
+		course: structuredClone(defaultCourse),
+		stats: structuredClone(defaultStats),
+	};
+}
+
 const settingsSchema = z.object({
 	handedness: z.enum(["right", "left"]),
 	accidentalMode: z.enum(["sharps", "flats"]),
