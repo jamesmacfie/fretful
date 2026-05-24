@@ -16,8 +16,8 @@ function Course() {
 	const { progress, setCurrentModule } = useTrainer();
 
 	return (
-		<div className="page-stack">
-			<section className="page-heading">
+		<div className="page-stack course-map">
+			<section className="page-heading page-heading--map">
 				<div>
 					<p className="app-kicker">Course</p>
 					<h2>Learn, drill, prove, review.</h2>
@@ -41,7 +41,7 @@ function Course() {
 						</div>
 						<p>{tier.summary}</p>
 					</div>
-					<div className="module-grid">
+					<div className="module-grid course-map__grid">
 						{getTierModules(tier.id).map((module) => (
 							<ModuleCard
 								key={module.id}
@@ -75,7 +75,12 @@ function ModuleCard({
 	onStart: () => void;
 }) {
 	return (
-		<article className="module-card" data-current={current}>
+		<article
+			className="module-card"
+			data-current={current}
+			data-unlocked={unlocked}
+			data-completed={completed}
+		>
 			<div className="module-card__top">
 				<span className="module-number">{module.order / 10}</span>
 				{completed ? (

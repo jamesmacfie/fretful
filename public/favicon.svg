@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+	<title id="title">Fretful musical mark</title>
+	<desc id="desc">A warm amber musical note over guitar string lines on a dark studio surface.</desc>
+	<rect width="512" height="512" rx="112" fill="#17151f" />
+	<circle cx="136" cy="128" r="118" fill="#f4b64a" opacity="0.14" />
+	<path d="M96 172h214M96 220h214M96 268h214" stroke="#786d63" stroke-width="12" stroke-linecap="round" opacity="0.56" />
+	<path d="M146 138v164M224 138v164M302 138v164" stroke="#3f3943" stroke-width="10" stroke-linecap="round" opacity="0.92" />
+	<path d="M318 112v232" stroke="#f4b64a" stroke-width="42" stroke-linecap="round" />
+	<path d="M318 116c62 14 105 43 132 87" fill="none" stroke="#ffe1a3" stroke-width="32" stroke-linecap="round" />
+	<ellipse cx="235" cy="358" rx="86" ry="58" transform="rotate(-18 235 358)" fill="#f4b64a" />
+	<ellipse cx="235" cy="358" rx="44" ry="26" transform="rotate(-18 235 358)" fill="#17151f" opacity="0.5" />
+	<path d="M110 356c43 55 113 85 200 72" fill="none" stroke="#ff7b4a" stroke-width="20" stroke-linecap="round" />
+</svg>

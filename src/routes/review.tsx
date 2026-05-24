@@ -30,8 +30,8 @@ function Review() {
 	const weakStrings = getWeakStrings(progress.stats.cellStats);
 
 	return (
-		<div className="page-stack">
-			<section className="page-heading">
+		<div className="page-stack review-map">
+			<section className="page-heading page-heading--map">
 				<div>
 					<p className="app-kicker">Review coach</p>
 					<h2>Weak zones and due practice.</h2>
@@ -50,7 +50,7 @@ function Review() {
 				</Button>
 			</section>
 
-			<section className="section-band">
+			<section className="section-band section-band--fretboard-map">
 				<div className="section-heading">
 					<div>
 						<p className="app-kicker">Heatmap</p>
@@ -68,7 +68,7 @@ function Review() {
 				/>
 			</section>
 
-			<section className="two-column">
+			<section className="two-column review-panels">
 				<div className="section-band">
 					<div className="section-heading">
 						<div>

@@ -131,7 +131,11 @@ export function Fretboard({
 	}));
 
 	return (
-		<div className="fretboard-wrap">
+		<div
+			className="fretboard-wrap"
+			data-handedness={settings.handedness}
+			data-disabled={disabled ? "true" : "false"}
+		>
 			<p className="fretboard-orientation-tip">
 				Rotate to landscape for a wider fretboard view.
 			</p>

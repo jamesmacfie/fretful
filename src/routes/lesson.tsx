@@ -53,7 +53,7 @@ function Lesson() {
 	};
 
 	return (
-		<div className="page-stack">
+		<div className="page-stack lesson-workbench">
 			<section className="page-heading lesson-heading">
 				<div>
 					<p className="app-kicker">{module.tier} checkpoint</p>

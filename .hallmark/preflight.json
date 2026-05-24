@@ -1,0 +1,14 @@
+{
+	"last_scan": "2026-05-24",
+	"framework": "Vite + TanStack React",
+	"font_stack": "Global CSS stack, no bundled imported font before redesign",
+	"palette": "Mixed legacy hex tokens and OKLCH shadcn-style tokens in src/styles.css",
+	"motion": "No motion library beyond tw-animate-css",
+	"spacing": "CSS clamp values plus Tailwind v4 defaults",
+	"preserve": [
+		"routes",
+		"trainer state",
+		"localStorage schema",
+		"fretboard scroll and orientation behavior"
+	]
+}

@@ -18,8 +18,8 @@ function Home() {
 	const recommendations = getRecommendedPracticeItems(progress, 3);
 
 	return (
-		<div className="page-stack">
-			<section className="dashboard-hero">
+		<div className="page-stack home-workbench">
+			<section className="dashboard-hero workbench-hero">
 				<div className="dashboard-hero__copy">
 					<p className="app-kicker">Local-first note trainer</p>
 					<h2>Continue building single-note recall.</h2>

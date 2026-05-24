@@ -194,7 +194,10 @@ export function QuizPanel({
 
 	if (mode === "study") {
 		return (
-			<section className="lesson-surface" aria-labelledby="study-title">
+			<section
+				className="lesson-surface lesson-surface--study"
+				aria-labelledby="study-title"
+			>
 				<div className="lesson-toolbar">
 					<div>
 						<p className="app-kicker">Study mode</p>
@@ -225,7 +228,10 @@ export function QuizPanel({
 		const passed = passesGate(module, summary);
 
 		return (
-			<section className="lesson-surface" aria-labelledby="summary-title">
+			<section
+				className="lesson-surface lesson-surface--summary"
+				aria-labelledby="summary-title"
+			>
 				<div className="session-summary">
 					{passed ? (
 						<CheckCircle2
@@ -278,7 +284,10 @@ export function QuizPanel({
 	}
 
 	return (
-		<section className="lesson-surface" aria-labelledby="quiz-title">
+		<section
+			className="lesson-surface lesson-surface--quiz"
+			aria-labelledby="quiz-title"
+		>
 			<div className="lesson-toolbar">
 				<div>
 					<p className="app-kicker">{modeLabel(prompt.mode)}</p>

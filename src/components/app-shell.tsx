@@ -38,60 +38,68 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 			<a className="skip-link" href="#main-content">
 				Skip to content
 			</a>
-			<header className="app-header">
-				<div className="app-header__brand">
-					<div className="brand-mark" aria-hidden="true">
-						F
+			<div className="app-chrome">
+				<header className="app-header">
+					<div className="app-header__brand">
+						<div className="brand-mark" aria-hidden="true">
+							<img
+								src="/favicon.svg"
+								alt=""
+								className="brand-mark__icon"
+								decoding="async"
+							/>
+						</div>
+						<div>
+							<p className="app-kicker">Progressive fretboard recall</p>
+							<h1>Fretful</h1>
+						</div>
 					</div>
-					<div>
-						<p className="app-kicker">Progressive fretboard recall</p>
-						<h1>Fretful</h1>
+					<div className="app-header__status">
+						<span>{courseProgress.percent}% course</span>
+						<span>{currentModule.title}</span>
+						{!persistenceAvailable ? (
+							<span className="status-warning">Storage unavailable</span>
+						) : null}
 					</div>
-				</div>
-				<div className="app-header__status">
-					<span>{courseProgress.percent}% course</span>
-					<span>{currentModule.title}</span>
-					{!persistenceAvailable ? (
-						<span className="status-warning">Storage unavailable</span>
-					) : null}
-				</div>
-				<Button
-					type="button"
-					variant={audioReady ? "secondary" : "default"}
-					size="sm"
-					onClick={enableSound}
-					className="sound-button"
-					aria-label={audioReady ? "Sound ready" : "Enable sound"}
-					title={audioReady ? "Sound ready" : "Enable sound"}
-				>
-					{audioReady ? <Volume2 /> : <VolumeX />}
-					<span className="sound-button__label">
-						{audioReady ? "Sound ready" : "Enable sound"}
-					</span>
-				</Button>
-			</header>
+					<Button
+						type="button"
+						variant={audioReady ? "secondary" : "default"}
+						size="sm"
+						onClick={enableSound}
+						className="sound-button"
+						aria-label={audioReady ? "Sound ready" : "Enable sound"}
+						title={audioReady ? "Sound ready" : "Enable sound"}
+					>
+						{audioReady ? <Volume2 /> : <VolumeX />}
+						<span className="sound-button__label">
+							{audioReady ? "Sound ready" : "Enable sound"}
+						</span>
+					</Button>
+				</header>
 
-			<nav className="app-nav" aria-label="Primary">
-				{NAV_ITEMS.map((item) => {
-					const Icon = item.icon;
-					const isActive =
-						item.to === "/"
-							? location.pathname === "/"
-							: location.pathname.startsWith(item.to);
+				<nav className="app-nav" aria-label="Primary">
+					{NAV_ITEMS.map((item) => {
+						const Icon = item.icon;
+						const isActive =
+							item.to === "/"
+								? location.pathname === "/"
+								: location.pathname.startsWith(item.to);
 
-					return (
-						<Link
-							key={item.to}
-							to={item.to}
-							className="app-nav__link"
-							data-active={isActive}
-						>
-							<Icon aria-hidden="true" />
-							<span>{item.label}</span>
-						</Link>
-					);
-				})}
-			</nav>
+						return (
+							<Link
+								key={item.to}
+								to={item.to}
+								className="app-nav__link"
+								data-active={isActive ? "true" : undefined}
+								aria-current={isActive ? "page" : undefined}
+							>
+								<Icon aria-hidden="true" />
+								<span>{item.label}</span>
+							</Link>
+						);
+					})}
+				</nav>
+			</div>
 
 			<main id="main-content" className="app-main">
 				{children}

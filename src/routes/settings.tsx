@@ -41,7 +41,7 @@ function Settings() {
 	};
 
 	return (
-		<div className="page-stack">
+		<div className="page-stack settings-workbench">
 			<section className="page-heading">
 				<div>
 					<p className="app-kicker">Settings</p>
