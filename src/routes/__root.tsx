@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { AppShell } from "#/components/app-shell";
+import { PwaUpdateToast } from "#/components/pwa-update-toast";
 import { TrainerProvider } from "#/features/fretboard/trainer-provider";
 import appCss from "../styles.css?url";
 
@@ -81,6 +82,7 @@ function RootDocument({ children }: { children: ReactNode }) {
 			<body>
 				<TrainerProvider>
 					<AppShell>{children}</AppShell>
+					<PwaUpdateToast />
 				</TrainerProvider>
 				<Scripts />
 			</body>
