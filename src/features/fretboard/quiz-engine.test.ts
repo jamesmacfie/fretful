@@ -18,6 +18,14 @@ function sequenceRandom(values: number[]) {
 }
 
 describe("quiz engine", () => {
+	it("defaults name-note capable modules to Name the Note", () => {
+		for (const module of COURSE_MODULES) {
+			if (module.availableModes.includes("name-note")) {
+				expect(module.defaultMode).toBe("name-note");
+			}
+		}
+	});
+
 	it("keeps ordinary course prompts inside their selected module", () => {
 		for (const module of COURSE_MODULES) {
 			const prompt = createPracticePrompt({

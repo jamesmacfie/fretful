@@ -820,6 +820,15 @@ svg {
 	gap: var(--space-md);
 }
 
+.lesson-mode-control {
+	justify-self: end;
+	justify-content: flex-end;
+}
+
+.lesson-mode-control label {
+	text-align: right;
+}
+
 .lesson-mode-control label,
 .setting-row label {
 	color: var(--color-ink-2);
@@ -1229,6 +1238,11 @@ svg {
 	.feedback-bar {
 		align-items: stretch;
 		flex-direction: column;
+	}
+
+	.lesson-mode-control {
+		justify-self: stretch;
+		justify-content: flex-start;
 	}
 
 	.metric-grid {
