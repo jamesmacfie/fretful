@@ -14,7 +14,7 @@ export const COURSE_MODULES: CourseModule[] = [
 			fretEnd: 0,
 			noteSet: "natural",
 		},
-		defaultMode: "study",
+		defaultMode: "name-note",
 		availableModes: ["study", "name-note", "pace"],
 		gate: { minAnswers: 8, accuracy: 0.85, avgResponseMs: 5000 },
 		labelsDefault: true,
