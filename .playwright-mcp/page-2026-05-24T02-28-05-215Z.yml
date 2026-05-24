@@ -1,0 +1,51 @@
+- generic [ref=e2]:
+  - link "Skip to content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: F
+      - heading "Fretful" [level=1] [ref=e8]
+    - button "Enable sound" [ref=e9]:
+      - img
+      - generic [ref=e10]: Enable sound
+  - navigation "Primary" [ref=e11]:
+    - link "Home" [ref=e12] [cursor=pointer]:
+      - /url: /
+      - img [ref=e13]
+      - generic [ref=e16]: Home
+    - link "Course" [ref=e17] [cursor=pointer]:
+      - /url: /course
+      - img [ref=e18]
+      - generic [ref=e20]: Course
+    - link "Lesson" [ref=e21] [cursor=pointer]:
+      - /url: /lesson
+      - img [ref=e22]
+      - generic [ref=e25]: Lesson
+    - link "Review" [ref=e26] [cursor=pointer]:
+      - /url: /review
+      - img [ref=e27]
+      - generic [ref=e29]: Review
+    - link "Settings" [ref=e30] [cursor=pointer]:
+      - /url: /settings
+      - img [ref=e31]
+      - generic [ref=e34]: Settings
+  - main [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: beginner checkpoint
+          - heading "Open strings" [level=2] [ref=e40]
+        - generic [ref=e41]:
+          - generic [ref=e42]: Mode
+          - combobox "Mode" [ref=e43]:
+            - img
+          - combobox [ref=e44]
+      - generic [ref=e45]: Requested checkpoint is locked, so this lesson opened your current module instead.
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: Why this matters
+            - heading "Name and hear the six standard tuning notes." [level=2] [ref=e50]
+          - generic [ref=e51]: natural
+        - paragraph [ref=e52]: Open strings are the map legend. Every fretted note is counted from one of these six starting pitches.
+  - status [ref=e53]

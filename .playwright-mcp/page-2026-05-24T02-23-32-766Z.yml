@@ -1,0 +1,227 @@
+- generic [ref=e2]:
+  - link "Skip to content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: F
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: Progressive fretboard recall
+        - heading "Fretful" [level=1] [ref=e9]
+    - generic [ref=e10]:
+      - generic [ref=e11]: 15% course
+      - generic [ref=e12]: Open strings
+    - button "Enable sound" [ref=e13]:
+      - img
+      - generic [ref=e14]: Enable sound
+  - navigation "Primary" [ref=e15]:
+    - link "Home" [ref=e16] [cursor=pointer]:
+      - /url: /
+      - img [ref=e17]
+      - generic [ref=e20]: Home
+    - link "Course" [ref=e21] [cursor=pointer]:
+      - /url: /course
+      - img [ref=e22]
+      - generic [ref=e24]: Course
+    - link "Lesson" [ref=e25] [cursor=pointer]:
+      - /url: /lesson
+      - img [ref=e26]
+      - generic [ref=e29]: Lesson
+    - link "Review" [ref=e30] [cursor=pointer]:
+      - /url: /review
+      - img [ref=e31]
+      - generic [ref=e33]: Review
+    - link "Settings" [ref=e34] [cursor=pointer]:
+      - /url: /settings
+      - img [ref=e35]
+      - generic [ref=e38]: Settings
+  - main [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: Course
+          - heading "Learn, drill, prove, review." [level=2] [ref=e44]
+        - paragraph [ref=e45]: The full 0-24 neck is always visible in lessons, but each checkpoint limits the active zone until recall is ready for more pressure.
+      - region "Beginner" [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: beginner
+            - heading "Beginner" [level=2] [ref=e50]
+          - paragraph [ref=e51]: Open strings, single strings, and small natural-note zones.
+        - generic [ref=e52]:
+          - article [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: "1"
+              - img "Complete" [ref=e56]
+            - heading "Open strings" [level=3] [ref=e59]
+            - paragraph [ref=e60]: Name and hear the six standard tuning notes.
+            - generic [ref=e61]:
+              - generic [ref=e62]: Frets 0-0
+              - generic [ref=e63]: natural
+              - generic [ref=e64]: study
+            - generic [ref=e65]:
+              - link "Start" [ref=e66] [cursor=pointer]:
+                - /url: /lesson?moduleId=b-open-strings&mode=study
+                - img
+                - text: Start
+              - link "Study" [ref=e67] [cursor=pointer]:
+                - /url: /lesson?moduleId=b-open-strings&mode=study
+          - article [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: "2"
+              - img "Complete" [ref=e71]
+            - heading "High E natural notes" [level=3] [ref=e74]
+            - paragraph [ref=e75]: Learn the first octave on the high E string.
+            - generic [ref=e76]:
+              - generic [ref=e77]: Frets 0-12
+              - generic [ref=e78]: natural
+              - generic [ref=e79]: name note
+            - generic [ref=e80]:
+              - link "Start" [ref=e81] [cursor=pointer]:
+                - /url: /lesson?moduleId=b-high-e-naturals&mode=name-note
+                - img
+                - text: Start
+              - link "Study" [ref=e82] [cursor=pointer]:
+                - /url: /lesson?moduleId=b-high-e-naturals&mode=study
+          - article [ref=e83]:
+            - generic [ref=e84]:
+              - generic [ref=e85]: "3"
+              - img "Unlocked" [ref=e86]
+            - heading "Low E natural notes" [level=3] [ref=e90]
+            - paragraph [ref=e91]: Transfer the high E pattern to the low E string.
+            - generic [ref=e92]:
+              - generic [ref=e93]: Frets 0-12
+              - generic [ref=e94]: natural
+              - generic [ref=e95]: name note
+            - paragraph [ref=e96]: Unlocks next after 10+ answers at 80% accuracy.
+            - generic [ref=e97]:
+              - link "Start" [ref=e98] [cursor=pointer]:
+                - /url: /lesson?moduleId=b-low-e-naturals&mode=name-note
+                - img
+                - text: Start
+              - link "Study" [ref=e99] [cursor=pointer]:
+                - /url: /lesson?moduleId=b-low-e-naturals&mode=study
+          - article [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]: "4"
+              - img "Locked" [ref=e103]
+            - heading "A and D first window" [level=3] [ref=e106]
+            - paragraph [ref=e107]: Work natural notes on frets 0-5 of the A and D strings.
+            - generic [ref=e108]:
+              - generic [ref=e109]: Frets 0-5
+              - generic [ref=e110]: natural
+              - generic [ref=e111]: find note
+            - paragraph [ref=e112]: "Pass Low E natural notes: Unlocks next after 10+ answers at 80% accuracy."
+          - article [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: "5"
+              - img "Locked" [ref=e116]
+            - heading "First-position natural mix" [level=3] [ref=e119]
+            - paragraph [ref=e120]: Mix all six strings across frets 0-5.
+            - generic [ref=e121]:
+              - generic [ref=e122]: Frets 0-5
+              - generic [ref=e123]: natural
+              - generic [ref=e124]: find note
+            - paragraph [ref=e125]: "Pass A and D first window: Unlocks next after 12+ answers at 80% accuracy."
+      - region "Intermediate" [ref=e126]:
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - paragraph [ref=e129]: intermediate
+            - heading "Intermediate" [level=2] [ref=e130]
+          - paragraph [ref=e131]: First-octave naturals, duplicates, and accidentals.
+        - generic [ref=e132]:
+          - article [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]: "6"
+              - img "Locked" [ref=e136]
+            - heading "Natural notes 0-12" [level=3] [ref=e139]
+            - paragraph [ref=e140]: Expand natural-note recall across the first octave of the full neck.
+            - generic [ref=e141]:
+              - generic [ref=e142]: Frets 0-12
+              - generic [ref=e143]: natural
+              - generic [ref=e144]: name note
+            - paragraph [ref=e145]: "Pass First-position natural mix: Unlocks next after 14+ answers at 82% accuracy."
+          - article [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: "7"
+              - img "Locked" [ref=e149]
+            - heading "String-pair recall" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Work natural notes on adjacent string groups from frets 0-12.
+            - generic [ref=e154]:
+              - generic [ref=e155]: Frets 0-12
+              - generic [ref=e156]: natural
+              - generic [ref=e157]: find note
+            - paragraph [ref=e158]: "Pass Natural notes 0-12: Unlocks next after 16+ answers at 85% accuracy and 4.5s average."
+          - article [ref=e159]:
+            - generic [ref=e160]:
+              - generic [ref=e161]: "8"
+              - img "Locked" [ref=e162]
+            - heading "Locate all naturals" [level=3] [ref=e165]
+            - paragraph [ref=e166]: Find every instance of a natural note inside frets 0-12.
+            - generic [ref=e167]:
+              - generic [ref=e168]: Frets 0-12
+              - generic [ref=e169]: natural
+              - generic [ref=e170]: find all
+            - paragraph [ref=e171]: "Pass String-pair recall: Unlocks next after 16+ answers at 85% accuracy and 4.3s average."
+          - article [ref=e172]:
+            - generic [ref=e173]:
+              - generic [ref=e174]: "9"
+              - img "Locked" [ref=e175]
+            - heading "Accidentals first window" [level=3] [ref=e178]
+            - paragraph [ref=e179]: Add sharps or flats across frets 0-7.
+            - generic [ref=e180]:
+              - generic [ref=e181]: Frets 0-7
+              - generic [ref=e182]: chromatic
+              - generic [ref=e183]: name note
+            - paragraph [ref=e184]: "Pass Locate all naturals: Unlocks next after 12+ answers at 82% accuracy and 6s average."
+          - article [ref=e185]:
+            - generic [ref=e186]:
+              - generic [ref=e187]: "10"
+              - img "Locked" [ref=e188]
+            - heading "Chromatic 0-12" [level=3] [ref=e191]
+            - paragraph [ref=e192]: Recall every note name across the first twelve frets.
+            - generic [ref=e193]:
+              - generic [ref=e194]: Frets 0-12
+              - generic [ref=e195]: chromatic
+              - generic [ref=e196]: find note
+            - paragraph [ref=e197]: "Pass Accidentals first window: Unlocks next after 18+ answers at 84% accuracy and 4.2s average."
+      - region "Advanced" [ref=e198]:
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - paragraph [ref=e201]: advanced
+            - heading "Advanced" [level=2] [ref=e202]
+          - paragraph [ref=e203]: Full-board chromatic recall, octave extension, and audio-first work.
+        - generic [ref=e204]:
+          - article [ref=e205]:
+            - generic [ref=e206]:
+              - generic [ref=e207]: "11"
+              - img "Locked" [ref=e208]
+            - heading "Octave extension 12-24" [level=3] [ref=e211]
+            - paragraph [ref=e212]: Transfer the 0-12 map to the upper octave.
+            - generic [ref=e213]:
+              - generic [ref=e214]: Frets 12-24
+              - generic [ref=e215]: natural
+              - generic [ref=e216]: name note
+            - paragraph [ref=e217]: "Pass Chromatic 0-12: Unlocks next after 18+ answers at 86% accuracy and 4s average."
+          - article [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: "12"
+              - img "Locked" [ref=e221]
+            - heading "Full-board chromatic" [level=3] [ref=e224]
+            - paragraph [ref=e225]: Recall every chromatic note from fret 0 through fret 24.
+            - generic [ref=e226]:
+              - generic [ref=e227]: Frets 0-24
+              - generic [ref=e228]: chromatic
+              - generic [ref=e229]: find note
+            - paragraph [ref=e230]: "Pass Octave extension 12-24: Unlocks next after 18+ answers at 87% accuracy and 3.6s average."
+          - article [ref=e231]:
+            - generic [ref=e232]:
+              - generic [ref=e233]: "13"
+              - img "Locked" [ref=e234]
+            - heading "Audio-first recall" [level=3] [ref=e237]
+            - paragraph [ref=e238]: Hear a note before finding it on the board.
+            - generic [ref=e239]:
+              - generic [ref=e240]: Frets 0-24
+              - generic [ref=e241]: chromatic
+              - generic [ref=e242]: audio match
+            - paragraph [ref=e243]: "Pass Full-board chromatic: Unlocks next after 20+ answers at 88% accuracy and 3.2s average."
+  - status [ref=e244]

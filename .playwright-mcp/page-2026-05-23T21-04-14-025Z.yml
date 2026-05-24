@@ -1,0 +1,56 @@
+- generic [ref=e2]:
+  - link "Skip to content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: F
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: Progressive fretboard recall
+        - heading "Fretful" [level=1] [ref=e9]
+    - generic [ref=e10]:
+      - generic [ref=e11]: 0% course
+      - generic [ref=e12]: Open strings
+    - button "Enable sound" [ref=e13]:
+      - img
+      - text: Enable sound
+  - navigation "Primary" [ref=e14]:
+    - link "Home" [ref=e15] [cursor=pointer]:
+      - /url: /
+      - img [ref=e16]
+      - generic [ref=e19]: Home
+    - link "Course" [ref=e20] [cursor=pointer]:
+      - /url: /course
+      - img [ref=e21]
+      - generic [ref=e23]: Course
+    - link "Lesson" [ref=e24] [cursor=pointer]:
+      - /url: /lesson
+      - img [ref=e25]
+      - generic [ref=e28]: Lesson
+    - link "Review" [ref=e29] [cursor=pointer]:
+      - /url: /review
+      - img [ref=e30]
+      - generic [ref=e32]: Review
+    - link "Settings" [ref=e33] [cursor=pointer]:
+      - /url: /settings
+      - img [ref=e34]
+      - generic [ref=e37]: Settings
+  - main [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: beginner checkpoint
+          - heading "Open strings" [level=2] [ref=e43]
+        - generic [ref=e44]:
+          - generic [ref=e45]: Mode
+          - combobox "Mode" [ref=e46]:
+            - img
+          - combobox [ref=e47]
+      - generic [ref=e48]: Requested checkpoint is locked, so this lesson opened your current module instead.
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: Why this matters
+            - heading "Name and hear the six standard tuning notes." [level=2] [ref=e53]
+          - generic [ref=e54]: natural
+        - paragraph [ref=e55]: Open strings are the map legend. Every fretted note is counted from one of these six starting pitches.
+  - status [ref=e56]
