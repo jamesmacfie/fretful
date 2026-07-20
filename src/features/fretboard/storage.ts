@@ -25,6 +25,10 @@ export const defaultSettings: SettingsState = {
 	timerSeconds: 5,
 	autoAdvanceOnCorrect: true,
 	highContrast: false,
+	fretboardView: "2d",
+	neckMarkerStyle: "dots",
+	neckWood: "rosewood",
+	neckBackColor: "natural",
 };
 
 export const defaultCourse: CourseState = {
@@ -71,6 +75,12 @@ const settingsSchema = z.object({
 	timerSeconds: z.number().min(2).max(20),
 	autoAdvanceOnCorrect: z.boolean().default(true),
 	highContrast: z.boolean(),
+	fretboardView: z.enum(["2d", "3d"]).default("2d"),
+	neckMarkerStyle: z.enum(["dots", "blocks", "sharkfin"]).default("dots"),
+	neckWood: z.enum(["rosewood", "maple", "ebony"]).default("rosewood"),
+	neckBackColor: z
+		.enum(["natural", "mahogany", "black", "cream", "blue"])
+		.default("natural"),
 });
 
 const courseSchema = z.object({

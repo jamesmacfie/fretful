@@ -17,6 +17,14 @@ export type AccidentalMode = "sharps" | "flats";
 
 export type NoteSet = "natural" | "chromatic";
 
+export type FretboardView = "2d" | "3d";
+
+export type MarkerStyle = "dots" | "blocks" | "sharkfin";
+
+export type NeckWood = "rosewood" | "maple" | "ebony";
+
+export type NeckBackColor = "natural" | "mahogany" | "black" | "cream" | "blue";
+
 export type ReviewSource = "review" | "current" | "stretch";
 
 export type StringNumber = 1 | 2 | 3 | 4 | 5 | 6;
@@ -122,6 +130,10 @@ export interface SettingsState {
 	timerSeconds: number;
 	autoAdvanceOnCorrect: boolean;
 	highContrast: boolean;
+	fretboardView: FretboardView;
+	neckMarkerStyle: MarkerStyle;
+	neckWood: NeckWood;
+	neckBackColor: NeckBackColor;
 }
 
 export interface CourseState {

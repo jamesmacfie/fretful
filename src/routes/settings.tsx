@@ -145,6 +145,69 @@ function Settings() {
 					/>
 				</SettingGroup>
 
+				<SettingGroup title="Fretboard">
+					<SelectSetting
+						label="View"
+						value={settings.fretboardView}
+						onValueChange={(value) =>
+							updateSettings({ fretboardView: value as "2d" | "3d" })
+						}
+						options={[
+							{ value: "2d", label: "2D board" },
+							{ value: "3d", label: "3D guitar" },
+						]}
+					/>
+					<SelectSetting
+						label="Fret markers"
+						value={settings.neckMarkerStyle}
+						onValueChange={(value) =>
+							updateSettings({
+								neckMarkerStyle: value as "dots" | "blocks" | "sharkfin",
+							})
+						}
+						options={[
+							{ value: "dots", label: "Dots" },
+							{ value: "blocks", label: "Blocks" },
+							{ value: "sharkfin", label: "Sharkfin" },
+						]}
+					/>
+					<SelectSetting
+						label="Fretboard wood"
+						value={settings.neckWood}
+						onValueChange={(value) =>
+							updateSettings({
+								neckWood: value as "rosewood" | "maple" | "ebony",
+							})
+						}
+						options={[
+							{ value: "rosewood", label: "Rosewood" },
+							{ value: "maple", label: "Maple" },
+							{ value: "ebony", label: "Ebony" },
+						]}
+					/>
+					<SelectSetting
+						label="Neck back colour"
+						value={settings.neckBackColor}
+						onValueChange={(value) =>
+							updateSettings({
+								neckBackColor: value as
+									| "natural"
+									| "mahogany"
+									| "black"
+									| "cream"
+									| "blue",
+							})
+						}
+						options={[
+							{ value: "natural", label: "Natural" },
+							{ value: "mahogany", label: "Mahogany" },
+							{ value: "black", label: "Black" },
+							{ value: "cream", label: "Cream" },
+							{ value: "blue", label: "Blue" },
+						]}
+					/>
+				</SettingGroup>
+
 				<SettingGroup title="Sound">
 					<SwitchSetting
 						label="Sound"

@@ -28,7 +28,7 @@ import type {
 	PracticePrompt,
 	QuizMode,
 } from "../types";
-import { Fretboard } from "./fretboard";
+import { FretboardView } from "./fretboard-view";
 
 const SESSION_LENGTH = 12;
 const AUTO_ADVANCE_DELAY_MS = 650;
@@ -208,7 +208,7 @@ export function QuizPanel({
 					Tap any highlighted position to hear it. Labels stay visible here so
 					the shape and sound can connect before recall begins.
 				</p>
-				<Fretboard
+				<FretboardView
 					zone={module.zone}
 					settings={progress.settings}
 					showLabels={progress.settings.showNoteLabelsInStudy}
@@ -368,7 +368,7 @@ export function QuizPanel({
 				</div>
 			) : null}
 
-			<Fretboard
+			<FretboardView
 				zone={prompt.zone}
 				settings={progress.settings}
 				showLabels={false}

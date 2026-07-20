@@ -857,6 +857,65 @@ svg {
 	max-width: 100%;
 }
 
+.fretboard-view {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.fretboard-view__controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: var(--space-sm) var(--space-md);
+	margin: 0 0 var(--space-sm);
+}
+
+.fretboard-view__toggle {
+	display: inline-flex;
+	gap: var(--space-2xs);
+	padding: var(--space-2xs);
+	border: var(--rule-hair) solid var(--color-fretboard-line);
+	border-radius: var(--radius-lg);
+	background: var(--color-paper-2);
+}
+
+.fretboard-view__style {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-sm);
+}
+
+.fretboard-view__style-field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2xs);
+	font-size: 0.8rem;
+}
+
+.fretboard-3d {
+	position: relative;
+	width: 100%;
+	height: min(58vh, 30rem);
+	border: var(--rule-hair) solid var(--color-fretboard-line);
+	border-radius: var(--radius-xl);
+	overflow: hidden;
+	background: var(--color-fretboard);
+	touch-action: none;
+}
+
+.fretboard-3d__canvas {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.fretboard-3d__overlay {
+	position: absolute;
+	top: var(--space-sm);
+	right: var(--space-sm);
+	z-index: 1;
+}
+
 .fretboard-orientation-tip {
 	display: none;
 	align-items: center;

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Flame, Target } from "lucide-react";
 
 import { Button } from "#/components/ui/button";
-import { Fretboard } from "#/features/fretboard/components/fretboard";
+import { FretboardView } from "#/features/fretboard/components/fretboard-view";
 import { getDisplayNote } from "#/features/fretboard/note-engine";
 import {
 	getAverageResponseMs,
@@ -58,7 +58,7 @@ function Review() {
 					</div>
 					<span className="tier-pill">0-24</span>
 				</div>
-				<Fretboard
+				<FretboardView
 					zone={FULL_BOARD_ZONE}
 					settings={progress.settings}
 					showLabels={false}
