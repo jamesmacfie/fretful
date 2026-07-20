@@ -115,6 +115,7 @@ export interface SettingsState {
 	accidentalMode: AccidentalMode;
 	showFretNumbers: boolean;
 	showNoteLabelsInStudy: boolean;
+	hideStringLabels: boolean;
 	soundEnabled: boolean;
 	spokenPrompts: boolean;
 	timbre: "clean-electric";

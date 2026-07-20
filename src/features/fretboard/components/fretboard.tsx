@@ -206,7 +206,7 @@ function FretboardRow({
 	return (
 		<>
 			<div className="string-label">
-				<span>{stringCell?.stringLabel}</span>
+				<span>{settings.hideStringLabels ? "" : stringCell?.stringLabel}</span>
 				<small>{row.stringNumber}</small>
 			</div>
 			{row.cells.map((cell) => {

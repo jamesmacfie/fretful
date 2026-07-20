@@ -123,6 +123,13 @@ function Settings() {
 						}
 					/>
 					<SwitchSetting
+						label="Hide string labels"
+						checked={settings.hideStringLabels}
+						onCheckedChange={(checked) =>
+							updateSettings({ hideStringLabels: checked })
+						}
+					/>
+					<SwitchSetting
 						label="Fret numbers"
 						checked={settings.showFretNumbers}
 						onCheckedChange={(checked) =>
